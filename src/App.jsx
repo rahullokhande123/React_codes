@@ -1,20 +1,24 @@
 
-import Header from "./Header";
-import Middle from "./Middle";
-import Footer from "./Footer";
+// ================ React Components ===============
+
+import Employee from "./Employee";
+import Student from "./Student";
+
+const nm="Sachin Mishra";
+const cls="Mtech";
+const fees=45000;
+
 const App=()=>{
-  
-  return( 
+  return(
     <>
-    <h1>Welcome To Cybrom Bhopal!!!!</h1> 
-                {/* Yah JSX Languge H Jo HTML ki tarah dikhte h but ye jsx h*/}
-  <Header/>
-  <Middle/>
-  <Footer/>
-  </>
+      <h1>
+      </h1>
+     {/* <Employee nm="Rahul" empno="E062" sal="50000"/> */}
+     <Student nm={nm} cls={cls} stufees={fees}/>
+    </>
   )
 }
-export default  App;
+export default App;
 
 
 
