@@ -1,0 +1,40 @@
+#box1{
+    background-color: red;
+    width: 350px;
+    height: 300px;
+    margin: auto;
+    padding-top: 40px;
+    border-radius: 20px;
+}
+#box2{
+    width: 250px;
+    height: 220px;
+    margin: auto;
+    background-color: darkblue;
+    padding-top: 40px;
+    border: 1px solid darkblue;
+    border-radius: 20px;
+}
+#box3{
+    width: 180px;
+    height: 140px;
+    margin: auto;
+    padding-top: 40px;
+    background-color: lightskyblue;
+    border-radius: 20px;
+}
+#box4{
+    width: 100px;
+    height: 60px;
+    margin: auto;
+    padding-top: 40px;
+    background-color: yellow;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+#box5{
+    width: 55px;
+    margin: auto;
+    margin-bottom: 30px;
+    font-weight: bold;
+}

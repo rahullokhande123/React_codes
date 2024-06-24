@@ -1,0 +1,17 @@
+body{
+    background-color: lightblue;
+}
+.head1{
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: underline;
+}
+.head2{
+    color: green;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+}
+#head3{
+    font-size: 50px;
+    color:brown;
+}
