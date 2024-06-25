@@ -1,42 +1,24 @@
-
-import { useState } from 'react';
-import Alert from 'react-bootstrap/Alert';
-import Button from 'react-bootstrap/Button';
-import { Container } from 'react-bootstrap';
-
-//----------------------------------------------
+import Spinner from 'react-bootstrap/Spinner';
 const App=()=>{
-  return(
-    <>
-      
-      <Container>
-        <Alert variant='success' dismissible>
-          This is a alert—check it out!
-        </Alert>
-
-        <Alert variant='danger' dismissible>
-          This is a alert—check it out!
-        </Alert>
-
-        <Alert variant='dark' dismissible>
-          This is a alert—check it out!
-        </Alert>
-
-        <Alert variant='info' dismissible>
-          This is a alert—check it out!
-        </Alert>
-
-        <Alert variant='primary' dismissible>
-          This is a alert—check it out!
-        </Alert>
-
-        <Alert variant='success' dismissible>
-          This is a alert—check it out!
-        </Alert>
-
-      </Container>
-       
-   </>
-  )
+ return(
+  <>
+      <Spinner animation="border" variant="primary" />
+      <Spinner animation="border" variant="secondary" />
+      <Spinner animation="border" variant="success" />
+      <Spinner animation="border" variant="danger" />
+      <Spinner animation="border" variant="warning" />
+      <Spinner animation="border" variant="info" />
+      <Spinner animation="border" variant="light" />
+      <Spinner animation="border" variant="dark" />
+      <Spinner animation="grow" variant="primary" />
+      <Spinner animation="grow" variant="secondary" />
+      <Spinner animation="grow" variant="success" />
+      <Spinner animation="grow" variant="danger" />
+      <Spinner animation="grow" variant="warning" />
+      <Spinner animation="grow" variant="info" />
+      <Spinner animation="grow" variant="light" />
+      <Spinner animation="grow" variant="dark" />
+  </>
+ )
 }
 export default App;
