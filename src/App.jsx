@@ -1,23 +1,56 @@
-import Spinner from 'react-bootstrap/Spinner';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 const App=()=>{
  return(
   <>
-      <Spinner animation="border" variant="primary" />
-      <Spinner animation="border" variant="secondary" />
-      <Spinner animation="border" variant="success" />
-      <Spinner animation="border" variant="danger" />
-      <Spinner animation="border" variant="warning" />
-      <Spinner animation="border" variant="info" />
-      <Spinner animation="border" variant="light" />
-      <Spinner animation="border" variant="dark" />
-      <Spinner animation="grow" variant="primary" />
-      <Spinner animation="grow" variant="secondary" />
-      <Spinner animation="grow" variant="success" />
-      <Spinner animation="grow" variant="danger" />
-      <Spinner animation="grow" variant="warning" />
-      <Spinner animation="grow" variant="info" />
-      <Spinner animation="grow" variant="light" />
-      <Spinner animation="grow" variant="dark" />
+           <Navbar bg="dark" data-bs-theme="dark">
+        <Container>
+          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#features">Features</Nav.Link>
+            <Nav.Link href="#pricing">Pricing</Nav.Link>
+          </Nav>
+        </Container>
+      </Navbar>
+      <br />
+
+      <Navbar bg="primary" data-bs-theme="dark">
+        <Container>
+          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#features">Features</Nav.Link>
+            <Nav.Link href="#pricing">Pricing</Nav.Link>
+          </Nav>
+        </Container>
+      </Navbar>
+
+      <br />
+    
+      <Navbar bg="success" data-bs-theme="dark">
+        <Container>
+          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#features">Features</Nav.Link>
+            <Nav.Link href="#pricing">Pricing</Nav.Link>
+          </Nav>
+        </Container>
+      </Navbar>
+      <br />
+
+      <Navbar bg="danger" data-bs-theme="dark">
+        <Container>
+          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#features">Features</Nav.Link>
+            <Nav.Link href="#pricing">Pricing</Nav.Link>
+          </Nav>
+        </Container>
+      </Navbar>
   </>
  )
 }
