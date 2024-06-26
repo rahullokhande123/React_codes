@@ -1,56 +1,36 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import { Container,Row, Col } from "react-bootstrap";
 const App=()=>{
  return(
   <>
-           <Navbar bg="dark" data-bs-theme="dark">
-        <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
-      <br />
+    <Container fluid className="text-center border p-5 bg-dark">  
+      {/* fluid -> ka use hm container ke sath krte h bada container lene ke */}
 
-      <Navbar bg="primary" data-bs-theme="dark">
-        <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
+{/* Container me bhi hm 12 Section bna sakte h md {} ki help se 
+(count krne pr eska total 12 hi aana chahiye) */}
 
-      <br />
-    
-      <Navbar bg="success" data-bs-theme="dark">
-        <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
-      <br />
+      <Row>
+        <Col md={6} className="border bg-info p-5 text-white mb-5">
+        <h1>Wellcome to Cybrom!!!</h1>
+        </Col>
+        <Col md={3} className="border bg-success p-5 text-white fs-6 mb-5">
+        <h1>Hello to Cybrom!!!</h1>
+        </Col>
+        <Col md={3} className="border bg-primary p-5 text-white mb-5 ">
+            <h1>I am Devloper</h1>
+        </Col>
 
-      <Navbar bg="danger" data-bs-theme="dark">
-        <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
+
+        <Col md={8} className="border bg-info p-5 text-white mb-5">
+        <h1>Wellcome to Cybrom!!!</h1>
+        </Col>
+        <Col md={2} className="border bg-success p-5 text-white fs-6 mb-5">
+        <h1>Hello to Cybrom!!!</h1>
+        </Col>
+        <Col md={2} className="border bg-primary p-5 text-white mb-5">
+            <h1>I am Devloper</h1>
+        </Col>
+      </Row>
+    </Container>
   </>
  )
 }
