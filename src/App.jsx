@@ -3,13 +3,6 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Carousel from 'react-bootstrap/Carousel';
-
-
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
 const App=()=>{
  return(
   <>
@@ -63,84 +56,8 @@ const App=()=>{
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel> 
-
-    {/* ======================================================== */}
-
-    
-      <Row>
-        <Col>
-        <Card style={{ width: '18rem' }}>
-      <img src="public/c1.jpg" width="100%" height="200" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-        </Col>
-
-        <Col>
-        <Card style={{ width: '18rem' }}>
-      <img src="public/c2.jpg" width="100%" height="200" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-        </Col>
-
-        <Col>
-        <Card style={{ width: '18rem' }}>
-      <img src="public/c3.jpg" width="100%" height="200" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-        </Col>
-
-        <Col>
-        <Card style={{ width: '18rem' }}>
-      <img src="public/c4.jpg" width="100%" height="200" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-        </Col>
-
-        <Col>
-        <Card style={{ width: '18rem' }}>
-      <img src="public/c5.jpg" width="100%" height="200" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-        </Col>
-
-      </Row>
-   
   </>
  )
 }
 export default App;
+
