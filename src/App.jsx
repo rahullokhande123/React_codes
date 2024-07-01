@@ -5,6 +5,9 @@ import About from "./pages/About";
 import Service from "./pages/Service";
 import Contact from "./pages/Contact";
 import Nopage from "./pages/Nopage";
+import CompanyServise from "./pages/CompanyServise";
+import ProductServise from "./pages/ProductService";
+import SelfServise from "./pages/SelfServise";
 
 const App=()=>{
   return(
@@ -15,7 +18,13 @@ const App=()=>{
                    <Route index element={<Home/>}/>
                    <Route path="/home" element={<Home/>}/>
                    <Route path="/about" element={<About/>}/>
-                   <Route path="/service" element={<Service/>}/>
+                   <Route path="/service" element={<Service/>} >
+                   
+                       <Route path="companyservice" element={<CompanyServise/>} />
+                       <Route path="productservice" element={<ProductServise/>} />
+                       <Route path="selfservice" element={<SelfServise/>} />
+
+                   </Route>
                    <Route path="/contact" element={<Contact/>}/>
                    <Route path="*" element={<Nopage/>}/>
 
