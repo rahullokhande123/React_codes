@@ -1,12 +1,12 @@
 const App=()=>{
 
-  const myName=(fnm, snm)=>{
-    alert("My Name : " + fnm + " " + snm + " From Bhopal ")
+  const myAdd=(x,y)=>{
+    alert(x+y);
   }
   return(
     <>
       <h1>Wellcome To Gaming World</h1>
-      <button onClick={()=>{myName("Rahul", "Lokhande")}}>Click Here</button>
+      <button onClick={()=>{myAdd(6000,4000)}}>Click Here</button>
     </>
   )
 }
