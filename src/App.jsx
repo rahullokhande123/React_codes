@@ -1,12 +1,12 @@
 const App=()=>{
 
-  const display=()=>{
-    alert("This is Alert Box")
+  const myName=(nm)=>{
+    alert("My Name : " + nm + " From Bhopal ")
   }
   return(
     <>
       <h1>Wellcome To Gaming World</h1>
-      <button onClick={display}>Click Here</button>
+      <button onClick={()=>{myName("Rahul Lokhande")}}>Click Here</button>
     </>
   )
 }
