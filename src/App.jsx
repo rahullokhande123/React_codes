@@ -1,12 +1,12 @@
 const App=()=>{
-
-  const myAdd=(x,y)=>{
-    alert(x+y);
+  const display=(nm, c)=>{
+         alert(nm+ " Event Type : " + c.type );
   }
+
   return(
     <>
       <h1>Wellcome To Gaming World</h1>
-      <button onClick={()=>{myAdd(6000,4000)}}>Click Here</button>
+      <button onClick={(e)=>{display("Rahul ", e)}} >Click Here</button>
     </>
   )
 }
