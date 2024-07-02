@@ -1,36 +1,15 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Layout from "./Layout";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Service from "./pages/Service";
-import Contact from "./pages/Contact";
-import Nopage from "./pages/Nopage";
-import CompanyServise from "./pages/CompanyServise";
-import ProductServise from "./pages/ProductService";
-import SelfServise from "./pages/SelfServise";
-
 const App=()=>{
+  const myresult=(c)=>{
+        let nm= c.target.name;
+        let val= c.target.value;
+        let typ= c.target.type;
+         alert(" Name : " + nm + " ," +"Value : "+ val + " ," + "Type : " + typ );
+  }
+
   return(
     <>
-       <BrowserRouter>
-               <Routes>
-                   <Route path="/" element={<Layout/>}>
-                   <Route index element={<Home/>}/>
-                   <Route path="/home" element={<Home/>}/>
-                   <Route path="/about" element={<About/>}/>
-                   <Route path="/service" element={<Service/>} >
-                   
-                       <Route path="companyservice" element={<CompanyServise/>} />
-                       <Route path="productservice" element={<ProductServise/>} />
-                       <Route path="selfservice" element={<SelfServise/>} />
-
-                   </Route>
-                   <Route path="/contact" element={<Contact/>}/>
-                   <Route path="*" element={<Nopage/>}/>
-
-                   </Route>
-               </Routes>
-       </BrowserRouter>
+      <h1>Wellcome To Gaming World</h1>
+      <button name="MyBtn" value="Button_Value" type="A" onClick={myresult}>Click Here</button>
     </>
   )
 }
