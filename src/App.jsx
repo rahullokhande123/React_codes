@@ -1,25 +1,13 @@
 import { useState } from "react";
 const App=()=>{
-    const [cnt,setCnt]=useState(0);
-    const myInc=()=>{
-      setCnt(cnt+1)
-    }
-    const myDec=()=>{
-      setCnt(cnt-1)
-    }
-    const myRes=()=>{
-      setCnt(0)
+     const [color,setColor] = useState("White");
+    const myColor=()=>{
+      setColor("Green")
     }
   return(
     <>
-      <center>
-      <h1>Please Count Actions</h1>
-      <h1> Count : {cnt}</h1>
-      <button onClick={myInc}> Increment </button>
-      <button onClick={myDec}> Decriment </button>
-      <button onClick={myRes}> Reset</button>
-      </center>
-      
+      <h1>Hello we are Cybrom Student : {color}</h1>
+      <button onClick={myColor} >Click Here</button>
     </>
   )
 }
