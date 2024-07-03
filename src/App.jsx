@@ -1,13 +1,10 @@
 import { useState } from "react";
 const App=()=>{
-     const [color,setColor] = useState("White");
-    const myColor=()=>{
-      setColor("Green")
-    }
+     const [name,setName] = useState("Rahul")
   return(
     <>
-      <h1>Hello we are Cybrom Student : {color}</h1>
-      <button onClick={myColor} >Click Here</button>
+      <h1>Hello we are Cybrom Student : {name}</h1>
+      <button onClick={()=>{setName("ARUN")}} >Click Here</button>
     </>
   )
 }
