@@ -2,6 +2,8 @@ import { useState } from "react";
 import axios from "axios";
 import { useEffect } from "react";
 
+
+
 import Table from 'react-bootstrap/Table';
 
 import { Container } from "react-bootstrap";
@@ -11,7 +13,10 @@ const App=()=>{
   
   const [mydata,setMydata]=useState([]);
   const loadData=()=>{
-    let url="https://jsonplaceholder.typicode.com/todos";
+    let url="http://localhost:3000/Student";
+               
+            //  axios.get() json server se data get krne ka kam krta h
+
     axios.get(url).then((res)=>{
       setMydata(res.data)
       console.log(res.data);
@@ -21,21 +26,17 @@ const App=()=>{
     loadData();
   },[]);
 
-  let status="";
+
+
   const ans=mydata.map((key)=>{
-    if(key.completed==true){
-      status="True";
-    }
-    else{
-      status="Fauls";
-    }
+
     return(
       <>
       <tr>
-        <td>{key.userId}</td>
-        <td>{key.id}</td>
-        <td>{key.title}</td>
-        <td>{status}</td>
+        <td>{key.rollno}</td>
+        <td>{key.name}</td>
+        <td>{key.city}</td>
+        <td>{key.fees}</td>
       </tr>
       </>
     )
@@ -48,10 +49,10 @@ const App=()=>{
       <Table striped bordered hover style={{width:"1300px"}}>
       <thead>
         <tr>
-          <th>User Id</th>
-          <th>Id</th>
-          <th>Title</th>
-          <th>Completed</th>
+          <th>Roll No</th>
+          <th>Name</th>
+          <th>City</th>
+          <th>Fees</th>
         </tr>
         {ans}
         </thead>
@@ -61,3 +62,4 @@ const App=()=>{
   )
 }
 export default App;
+

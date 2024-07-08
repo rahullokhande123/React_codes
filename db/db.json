@@ -1,0 +1,70 @@
+{
+    "Student":[
+        {
+            "rollno":121,
+            "name":"Rahul Lokhande",
+            "city":"Bhopal",
+            "fees":43000
+        },
+        {
+            "rollno":122,
+            "name":"Sakshi Sahu",
+            "city":"Satna",
+            "fees":40000
+        },
+        {
+            "rollno":123,
+            "name":"Arun Silawat",
+            "city":"Raisen",
+            "fees":50000
+        },
+        {
+            "rollno":124,
+            "name":"Yashi Varma",
+            "city":"Bhopal",
+            "fees":43000
+        },
+        {
+            "rollno":125,
+            "name":"Vikash Varma",
+            "city":"Rewa",
+            "fees":42000
+        },
+        {
+            "rollno":126,
+            "name":"Satyam Sukla",
+            "city":"Rewa",
+            "fees":42000
+        },
+        {
+            "rollno":127,
+            "name":"Mohit Kumar",
+            "city":"Bhopal",
+            "fees":40000
+        },
+        {
+            "rollno":128,
+            "name":"Monish Monish",
+            "city":"Bhopal",
+            "fees":40000
+        },
+        {
+            "rollno":129,
+            "name":"Jalaj Chingariya",
+            "city":"Hoshangabad",
+            "fees":39000
+        },
+        {
+            "rollno":130,
+            "name":"Subham Kose",
+            "city":"Bhopal",
+            "fees":43000
+        },
+        {
+            "rollno":131,
+            "name":"Nikesh Yadav",
+            "city":"Hoshangabad",
+            "fees":30000
+        }
+    ]
+}
