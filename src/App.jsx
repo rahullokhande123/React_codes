@@ -1,65 +1,34 @@
-import { useState } from "react";
-import axios from "axios";
-import { useEffect } from "react";
-
-
-
-import Table from 'react-bootstrap/Table';
-
-import { Container } from "react-bootstrap";
+import { BrowserRouter,Routes,Route } from "react-router-dom";
+import Layout from "./Layout";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import Display from "./pages/Display";
+import Insert from "./pages/Insert";
+import Search from "./pages/Search";
+import Update from "./pages/Update";
 
 
 const App=()=>{
-  
-  const [mydata,setMydata]=useState([]);
-  const loadData=()=>{
-    let url="http://localhost:3000/Student";
-               
-            //  axios.get() json server se data get krne ka kam krta h
-
-    axios.get(url).then((res)=>{
-      setMydata(res.data)
-      console.log(res.data);
-    });
-  }
-  useEffect(()=>{
-    loadData();
-  },[]);
-
-
-
-  const ans=mydata.map((key)=>{
-
-    return(
-      <>
-      <tr>
-        <td>{key.rollno}</td>
-        <td>{key.name}</td>
-        <td>{key.city}</td>
-        <td>{key.fees}</td>
-      </tr>
-      </>
-    )
-  })
   return(
     <>
-    <Container>
-      <h1>Welcome To Cybrom Bhopal !!!</h1>
-      
-      <Table striped bordered hover style={{width:"1300px"}}>
-      <thead>
-        <tr>
-          <th>Roll No</th>
-          <th>Name</th>
-          <th>City</th>
-          <th>Fees</th>
-        </tr>
-        {ans}
-        </thead>
-      </Table>
-      </Container>
+    <BrowserRouter>
+         <Routes>
+             <Route>
+                 <Route path="/" element={<Layout/>}>
+                 <Route index element={<Home/>}/>
+                 <Route path="home" element={<Home/>}/>
+                 <Route path="contact" element={<Contact/>}/>
+                 <Route path="display" element={<Display/>}/>
+                 <Route path="insert" element={<Insert/>}/>
+                 <Route path="search" element={<Search/>}/>
+                 <Route path="update" element={<Update/>}/>
+
+                 </Route>
+
+             </Route>
+         </Routes>
+    </BrowserRouter>
     </>
   )
 }
 export default App;
-
