@@ -24,14 +24,14 @@
     {
       "id": "4",
       "rollno": 124,
-      "name": "Yashi Varma",
+      "name": "Yashi Verma",
       "city": "Bhopal",
       "fees": 43000
     },
     {
       "id": "5",
       "rollno": 125,
-      "name": "Vikash Varma",
+      "name": "Vikash Sharma",
       "city": "Rewa",
       "fees": 42000
     },
@@ -114,6 +114,13 @@
       "name": "Raj",
       "city": "Bhopal",
       "fees": "20000"
+    },
+    {
+      "id": "c819",
+      "rollno": "137",
+      "name": "Saurav Pastor",
+      "city": "Tikamgarh",
+      "fees": "350000"
     }
   ]
 }

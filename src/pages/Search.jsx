@@ -1,18 +1,22 @@
+
+
 import axios from "axios";
 import { useState } from "react";
 import Table from 'react-bootstrap/Table';
 
+
 const Search=()=>{
-  const [rno,setrno]=useState("");
-  const [mydata,setdata]=useState([]);
+
+  const [rno,setrno]=useState("")
+  const [mydata,setmydata]=useState([])
 
   const handlesearch=()=>{
     let url=`http://localhost:3000/Student/?rollno=${rno}`
     axios.get(url).then((res)=>{
-      setdata(res.data)
+      setmydata(res.data)
     })
   }
-  let ans =mydata.map((key)=>{
+  const ans=mydata.map((key)=>{
     return(
       <>
       <tr>
@@ -24,27 +28,27 @@ const Search=()=>{
       </>
     )
   })
-    return(
-        <>
-          <h1> Search Students Record</h1>
-          <input type="text" value={rno} onChange={(e)=>{setrno(e.target.value)}}/>
-          <button onClick={handlesearch}>Search</button>
-          <Table striped bordered hover>
-          <thead>
-            <tr>
-              <th>Roll No</th>
-              <th>Name</th>
-              <th>City</th>
-              <th>Fees</th>
+
+  return(
+    <>
+     <h1>Search My Data</h1>
+     <input type="text" value={rno} onChange={(e)=>{setrno(e.target.value)}} />
+     <button onClick={handlesearch}>Search</button>
+     <Table striped bordered hover>
+      <thead>
+        <tr>
+          <th>Roll No</th>
+          <th>Name</th>
+          <th>City</th>
+          <th>Fees</th>
         </tr>
       </thead>
       <tbody>
         {ans}
       </tbody>
-          </Table>
-        </>
-    )
+      </Table>
+
+    </>
+  )
 }
-
-
 export default Search;
