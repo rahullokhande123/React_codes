@@ -1,19 +1,10 @@
-import Cybrom from "./Cybrom";
-import Birthday from "./Birthday";
-import { useState } from "react";
-import Loader from "./Loader";
+import College from "./College";
 
 const App=()=>{
-const [myvalue,setmyvalue]=useState(false);
-setTimeout(()=>{
-  setmyvalue(true)
-},5000)
-
-return(
-  <>
-  <h1>Conditional Programing</h1>
-  {myvalue ? <Birthday/> : <Cybrom/>}
-  </>
-)
+  return(
+    <>
+    <College myVal={true}/>
+    </>
+  )
 }
 export default App;
