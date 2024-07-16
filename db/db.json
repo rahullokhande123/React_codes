@@ -1,11 +1,11 @@
 {
   "Student": [
     {
-      "id": "1",
-      "rollno": 121,
+      "id": "e0af",
+      "rollno": "121",
       "name": "Rahul Lokhande",
-      "city": "Bhopal",
-      "fees": 43000
+      "city": "Betul",
+      "fees": "43000"
     },
     {
       "id": "2",
@@ -76,30 +76,6 @@
       "name": "Nikesh Yadav",
       "city": "Hoshangabad",
       "fees": 30000
-    },
-    {
-      "id": "12",
-      "rollno": "132",
-      "name": "Swati",
-      "city": "Bhopal",
-      "fees": "50000"
-    },
-    {
-      "id": "299e",
-      "rollno": "133",
-      "name": "Himanshee",
-      "city": "Bhopal",
-      "fees": "80000"
-    },
-    {
-      "id": "2b98"
-    },
-    {
-      "id": "1d54",
-      "rollno": "134",
-      "name": "Aditya",
-      "city": "Bhopal",
-      "fees": "40000"
     },
     {
       "id": "0b73",

@@ -1,34 +1,19 @@
-import { BrowserRouter,Routes,Route } from "react-router-dom";
-import Layout from "./Layout";
-import Home from "./pages/Home";
-import Contact from "./pages/Contact";
-import Display from "./pages/Display";
-import Insert from "./pages/Insert";
-import Search from "./pages/Search";
-import Update from "./pages/Update";
-
+import Cybrom from "./Cybrom";
+import Birthday from "./Birthday";
+import { useState } from "react";
+import Loader from "./Loader";
 
 const App=()=>{
-  return(
-    <>
-    <BrowserRouter>
-         <Routes>
-             <Route>
-                 <Route path="/" element={<Layout/>}>
-                 <Route index element={<Home/>}/>
-                 <Route path="home" element={<Home/>}/>
-                 <Route path="contact" element={<Contact/>}/>
-                 <Route path="display" element={<Display/>}/>
-                 <Route path="insert" element={<Insert/>}/>
-                 <Route path="search" element={<Search/>}/>
-                 <Route path="update" element={<Update/>}/>
+const [myvalue,setmyvalue]=useState(false);
+setTimeout(()=>{
+  setmyvalue(true)
+},5000)
 
-                 </Route>
-
-             </Route>
-         </Routes>
-    </BrowserRouter>
-    </>
-  )
+return(
+  <>
+  <h1>Conditional Programing</h1>
+  {myvalue ? <Birthday/> : <Cybrom/>}
+  </>
+)
 }
 export default App;
