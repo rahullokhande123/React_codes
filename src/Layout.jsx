@@ -4,7 +4,7 @@ const Layout=()=>{
         <>
         <Link to="home">Home</Link> |
         <Link to="about">About</Link>|
-        <Link to="contact">Contact</Link>
+        <Link to="contact/-420">Contact</Link>
         <hr size="4" color="red" />
         <Outlet/>
         <hr size="4" color="red" />
