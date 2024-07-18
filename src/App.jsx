@@ -1,24 +1,22 @@
-import { useRef,useEffect,useState} from "react";
+import Layout from "./Layout";
+import { BrowserRouter,Routes,Route } from "react-router-dom";
+import Home from "./Home";
+import About from "./About";
+import Contact from "./Contact";
 
-const App =()=>{
-  const [mydata,setMydata]=useState("");
-  const myref=useRef(0);
-  const textref=useRef(0);
-
-  useEffect(()=>{
-    myref.current=myref.current+1
-  })
-
-  const display=()=>{
-    textref.current.style.backgroundColor="skyblue";
-  }
-
+const App=()=>{
   return(
     <>
-       <h1>Wellcome To Cybrom</h1>
-       <textarea value={mydata} ref={textref} onChange={(e)=>{setMydata(e.target.value)}} />
-        <h1>Total Count : {myref.current}</h1>
-        <button onClick={display}>Click</button>    
+    <BrowserRouter>
+          <Routes>
+               <Route path="/" element={<Layout/>}>
+                  <Route index element={<Home/>}/>
+                  <Route path="home" element={<Home/>}/>
+                  <Route path="about" element={<About/>}/>
+                  <Route path="contact" element={<Contact/>}/>
+               </Route>
+          </Routes>
+    </BrowserRouter>
     </>
   )
 }
