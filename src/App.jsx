@@ -1,20 +1,16 @@
-import { useState } from "react";
-import Cybrom from "./Cybrom";
-import { createContext } from "react";
+import Bhopal from "./Bhopal"
+import { myContext } from "./CourseContext"
+import { useContext } from "react"
 
-const myContext=createContext();
 const App=()=>{
- const [user,setUser]=useState("GAMING ZONE")
- 
+
+  const {course,setCourse}=useContext(myContext)
   return(
     <>
-    <h1>{user}</h1>
-    <myContext.Provider value={{user}}>
-      <Cybrom/>
-    </myContext.Provider>
- 
+    <h1>Wellcome To Cybrom {course}</h1>
+    <button onClick={()=>{setCourse("PHP")}}>Click Here</button>
+    <Bhopal/>
     </>
   )
 }
-export default App;
-export {myContext};
+export default App
