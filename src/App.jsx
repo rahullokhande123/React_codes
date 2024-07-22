@@ -1,23 +1,20 @@
-import Layout from "./Layout";
-import { BrowserRouter,Routes,Route } from "react-router-dom";
-import Home from "./Home";
-import About from "./About";
-import Contact from "./Contact";
+import { useState } from "react";
+import Cybrom from "./Cybrom";
+import { createContext } from "react";
 
+const myContext=createContext();
 const App=()=>{
+ const [user,setUser]=useState("GAMING ZONE")
+ 
   return(
     <>
-    <BrowserRouter>
-          <Routes>
-               <Route path="/" element={<Layout/>}>
-                  <Route index element={<Home/>}/>
-                  <Route path="home" element={<Home/>}/>
-                  <Route path="about" element={<About/>}/>
-                  <Route path="contact/:id" element={<Contact/>}/>
-               </Route>
-          </Routes>
-    </BrowserRouter>
+    <h1>{user}</h1>
+    <myContext.Provider value={{user}}>
+      <Cybrom/>
+    </myContext.Provider>
+ 
     </>
   )
 }
 export default App;
+export {myContext};
