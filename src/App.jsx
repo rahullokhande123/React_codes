@@ -1,16 +1,20 @@
-import Bhopal from "./Bhopal"
-import { myContext } from "./CourseContext"
-import { useContext } from "react"
+import Bhopal from "./Bhopal";
+import { useState } from "react";
+import { createContext } from "react";
 
+const courseContext=createContext();
 const App=()=>{
 
-  const {course,setCourse}=useContext(myContext)
+  const [course,setCourse]=useState("Java");
   return(
     <>
-    <h1>Wellcome To Cybrom {course}</h1>
-    <button onClick={()=>{setCourse("PHP")}}>Click Here</button>
-    <Bhopal/>
+    <button onClick={()=>{setCourse("Python")}} >Click Here</button>
+    <h1>  {course} Programing Langauge </h1>
+    <courseContext.Provider value={{course,setCourse}}>
+      <Bhopal/>
+    </courseContext.Provider>
     </>
   )
 }
-export default App
+export default App;
+export {courseContext};

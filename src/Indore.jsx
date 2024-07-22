@@ -1,8 +1,8 @@
-import { myContext } from "./CourseContext";
+import { courseContext } from "./App";
 import { useContext } from "react";
 
 const Indore=()=>{
-    const {course,setCourse}=useContext(myContext);
+    const {course,setCourse}=useContext(courseContext);
     return(
       <>
       <button onClick={()=>{setCourse("C++")}} >Click</button>
