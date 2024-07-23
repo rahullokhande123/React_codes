@@ -1,20 +1,20 @@
-import Bhopal from "./Bhopal";
-import { useState } from "react";
-import { createContext } from "react";
 
-const courseContext=createContext();
+import { mycolorContext } from "./ColorContext"
+import { useContext, useState } from "react"
+
+
 const App=()=>{
 
-  const [course,setCourse]=useState("Java");
+  const [txt,setTxt]=useState("");
+  const {color,setColor}=useContext(mycolorContext)
   return(
     <>
-    <button onClick={()=>{setCourse("Python")}} >Click Here</button>
-    <h1>  {course} Programing Langauge </h1>
-    <courseContext.Provider value={{course,setCourse}}>
-      <Bhopal/>
-    </courseContext.Provider>
+    <h1>Wellcome To Cybrom</h1>
+    Enter Color <input type="text" value={txt} onChange={(e)=>{setTxt(e.target.value)}} />
+    <button onClick={()=>{setColor(txt)}}>Click Here</button>
+    <div style={{width:"400px",height:"400px",border:"2px solid black",backgroundColor:color}}></div>
+    
     </>
   )
 }
-export default App;
-export {courseContext};
+export default App
