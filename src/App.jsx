@@ -1,23 +1,17 @@
-
-
-
-//=====================================================
-
-import AuthUser from "./AuthUser";
-import UnauthUser from "./UnauthUser";
+import Login from "./Login";
+import Logout from "./Logout";
 import { useContext } from "react";
-import { myloginContext } from "./LoginContext";
-
+import { mylogContext } from "./LoginContext";
 
 const App=()=>{
-  
-  const {user}=useContext(myloginContext);
 
+  const {user}=useContext(mylogContext);
   return(
-     <>
-      <h1>My Login</h1>
-      {user.auth ? <AuthUser/> : <UnauthUser/>}
-     </>
+
+    <>
+    {user.auth ? <Logout/> : <Login/> }
+   
+    </>
   )
 }
 export default App;

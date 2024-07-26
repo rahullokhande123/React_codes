@@ -1,102 +1,25 @@
 {
   "Student": [
     {
-      "id": "e0af",
-      "rollno": "121",
+      "id": "1",
       "name": "Rahul Lokhande",
-      "city": "Betul",
-      "fees": "43000"
+      "userid": "rahul123",
+      "email": "rlokhande06244@gmail.com",
+      "password": "r123"
     },
     {
-      "id": "2",
-      "rollno": 122,
-      "name": "Sakshi Sahu",
-      "city": "Satna",
-      "fees": 40000
+      "id": "fcb3",
+      "name": "Arun",
+      "userid": "arun123",
+      "email": "arun@gmail.co",
+      "password": "a123"
     },
     {
-      "id": "3",
-      "rollno": 123,
-      "name": "Arun Silawat",
-      "city": "Raisen",
-      "fees": 50000
-    },
-    {
-      "id": "4",
-      "rollno": 124,
-      "name": "Yashi Verma",
-      "city": "Bhopal",
-      "fees": 43000
-    },
-    {
-      "id": "5",
-      "rollno": 125,
-      "name": "Vikash Sharma",
-      "city": "Rewa",
-      "fees": 42000
-    },
-    {
-      "id": "6",
-      "rollno": 126,
-      "name": "Satyam Sukla",
-      "city": "Rewa",
-      "fees": 42000
-    },
-    {
-      "id": "7",
-      "rollno": 127,
-      "name": "Mohit Kumar",
-      "city": "Bhopal",
-      "fees": 40000
-    },
-    {
-      "id": "8",
-      "rollno": 128,
-      "name": "Monish Monish",
-      "city": "Bhopal",
-      "fees": 40000
-    },
-    {
-      "id": "9",
-      "rollno": 129,
-      "name": "Jalaj Chingariya",
-      "city": "Hoshangabad",
-      "fees": 39000
-    },
-    {
-      "id": "10",
-      "rollno": 130,
-      "name": "Subham Kose",
-      "city": "Bhopal",
-      "fees": 43000
-    },
-    {
-      "id": "11",
-      "rollno": 131,
-      "name": "Nikesh Yadav",
-      "city": "Hoshangabad",
-      "fees": 30000
-    },
-    {
-      "id": "0b73",
-      "rollno": "135",
-      "name": "Pragya",
-      "city": "Bhopal",
-      "fees": "30000"
-    },
-    {
-      "id": "2a4e",
-      "rollno": "136",
-      "name": "Raj",
-      "city": "Bhopal",
-      "fees": "20000"
-    },
-    {
-      "id": "c819",
-      "rollno": "137",
-      "name": "Saurav Pastor",
-      "city": "Tikamgarh",
-      "fees": "350000"
+      "id": "fbdf",
+      "name": "",
+      "userid": "",
+      "email": "",
+      "password": ""
     }
   ]
 }
