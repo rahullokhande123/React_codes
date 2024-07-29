@@ -1,17 +1,17 @@
-import Login from "./Login";
-import Logout from "./Logout";
-import { useContext } from "react";
-import { mylogContext } from "./LoginContext";
+import { useSelector,useDispatch } from "react-redux";
+import { myinc,mydic } from "./counterSlice";
 
 const App=()=>{
 
-  const {user}=useContext(mylogContext);
-  return(
-
-    <>
-    {user.auth ? <Logout/> : <Login/> }
-   
-    </>
-  )
+    const Counter=useSelector((state)=>state.mycounter.cnt)
+    const mydis=useDispatch();
+    return(
+        <>
+        <h1>My Counter</h1>
+        <button onClick={()=>{mydis(myinc())}}>Increment</button>
+        <h1> {Counter} </h1>
+        <button onClick={()=>{mydis(mydic())}}>Decrement</button>
+        </>
+    )
 }
 export default App;
