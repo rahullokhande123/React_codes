@@ -1,44 +1,60 @@
-import { useState } from "react";
-import { useSelector,useDispatch } from "react-redux";
-import { addTask } from "./toDoSlice";
 
+import { useSelector,useDispatch } from "react-redux";
+import { useState } from "react";
+import { overTask, delTask, compTask } from "./toDoSlice";
 
 const App=()=>{
-    const [val,setVal]=useState("");
-    const mytask=useSelector((state)=>state.todolist.task);
+
+    const [input,setInput]=useState("")
+
+    const mySelector=useSelector((state)=>state.myTask.task);
     const mydis=useDispatch();
+    console.log(mySelector);
 
     const taskAdd=()=>{
-       mydis(addTask({id: Date.now(), task:val}))
-       setVal("");
+        mydis(overTask({id: Date.now(), task:input, status:"uncomplete" }))
+        setInput("")
     }
-    let sno=0
-    
+    // const myDel=()=>{
+    //     mydis(overDelTask({id: Date.now(), task:input}))
+    // }
 
-    const ans = mytask.map((key)=>{
-        sno++;
+    const myDel=(id)=>{
+        mydis(delTask(id))
+    }
+
+    const recComp=(id)=>{
+        mydis(compTask(id))
+    }
+    
+    let sno=0
+    const ans=mySelector.map((key)=>{
+        sno++
         return(
             <>
             <tr>
                 <td>{sno}</td>
-                <td>{key.task}</td>
+                <td>{ key.task}</td>
+                <button onClick={()=>{myDel(key.id)}} >Delet</button>
+                <button onClick={()=>{recComp(key.id)}}>Complete</button>
             </tr>
             </>
         )
     })
+
     return(
         <>
-        <h1>To Do App </h1>
-        Enter <input type="text" value={val} onChange={(e)=>{setVal(e.target.value)}} />
+        <h1>TO DO List</h1>
+        <input type="text" value={input} onChange={(e)=>{setInput(e.target.value)}} />
         <button onClick={taskAdd}>Add</button>
-        <hr size="4" color="blue" />
         
-            <tr>
-                <th>S no.</th> 
-                <th>Task</th>
-            </tr>
-            {ans}
-        
+
+        <hr size="10px" color="black" />
+        <tr>
+            <th>S No.</th>
+            <th>Task</th>
+        </tr>
+        {ans}
         </>
     )
 }
