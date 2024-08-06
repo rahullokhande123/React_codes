@@ -7,12 +7,12 @@ const App=()=>{
 
     const [input,setInput]=useState("")
 
-    const mySelector=useSelector((state)=>state.myTask.task);
+    const mySelector=useSelector((state)=>state.myTask.task); 
     const mydis=useDispatch();
     console.log(mySelector);
 
     const taskAdd=()=>{
-        mydis(overTask({id: Date.now(), task:input, status:"uncomplete" }))
+        mydis(overTask({id: Date.now(), task:input, complete:false }))
         setInput("")
     }
     // const myDel=()=>{
@@ -34,7 +34,7 @@ const App=()=>{
             <>
             <tr>
                 <td>{sno}</td>
-                <td>{ key.task}</td>
+                <td>{key.complete? key.task : <span style={{textDecoration:"line-through",color:"black"}}>{key.task}</span>}</td>
                 <button onClick={()=>{myDel(key.id)}} >Delet</button>
                 <button onClick={()=>{recComp(key.id)}}>Complete</button>
             </tr>
@@ -59,3 +59,10 @@ const App=()=>{
     )
 }
 export default App;
+
+
+
+
+
+
+
