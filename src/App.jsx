@@ -1,7 +1,7 @@
 
 import { useSelector,useDispatch } from "react-redux";
 import { useState } from "react";
-import { overTask, delTask, compTask,taskUncom } from "./toDoSlice";
+import { overTask, delTask, compTask,taskUncom,editSave } from "./toDoSlice";
 
 const App=()=>{
 

@@ -53,10 +53,15 @@ const myToSlice=createSlice({
                     state.task[i].complete=false;
                 }
             }
+        },
+        editSave:(state,actions)=>{
+            for(var i=0; i<state.task.length; i++){
+                if(state.task[i].id==actions.payload.id){
+                    state.task[i].task=actions.payload.task;
+                }
+            }
         }
-
-
     }
 })
 export default myToSlice.reducer;
-export const {overTask,delTask,compTask,taskUncom}=myToSlice.actions;
+export const {overTask,delTask,compTask,taskUncom,editSave}=myToSlice.actions;
