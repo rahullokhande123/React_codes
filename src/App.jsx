@@ -1,7 +1,7 @@
 
 import { useSelector,useDispatch } from "react-redux";
 import { useState } from "react";
-import { overTask, delTask, compTask } from "./toDoSlice";
+import { overTask, delTask, compTask,taskUncom } from "./toDoSlice";
 
 const App=()=>{
 
@@ -23,8 +23,13 @@ const App=()=>{
         mydis(delTask(id))
     }
 
-    const recComp=(id)=>{
+    const workComp=(id)=>{
         mydis(compTask(id))
+    }
+
+    const workUncomp=(id)=>{
+        mydis(taskUncom(id));
+        
     }
     
     let sno=0
@@ -34,9 +39,16 @@ const App=()=>{
             <>
             <tr>
                 <td>{sno}</td>
-                <td>{key.complete? key.task : <span style={{textDecoration:"line-through",color:"black"}}>{key.task}</span>}</td>
+                <td>{key.complete? <span style={{textDecoration:"line-through",color:"black"}}>{key.task}</span> : key.task }</td>
+                <td>
                 <button onClick={()=>{myDel(key.id)}} >Delet</button>
-                <button onClick={()=>{recComp(key.id)}}>Complete</button>
+                </td>
+                <td>
+                <button onClick={()=>{workComp(key.id)}}>Complete</button>
+                </td>
+                <td>
+                    <button onClick={()=>{workUncomp(key.id)}}>Uncomplete</button>
+                </td>
             </tr>
             </>
         )
