@@ -1,28 +1,61 @@
-// // src/App.js
-// import React from 'react';
-// // import SimpleBarChart from './components/BarChart';
-// import SimpleBarChart from './components/Chart';
 
-// const App = () => (
-//   <div>
-//     <h1>Recharts Example</h1>
-//     <SimpleBarChart />
-//   </div>
-// );
 
+// import { useState } from "react";
+// import { createContext } from "react";
+// import Cybrom from "./Cybrom";
+// import College from "./College";
+
+// const myContext=createContext();
+
+// const App=()=>{
+//   const [myvalue,setMyvalue]=useState("I am a Developer");
+
+//   return(
+//     <>
+//        <myContext.Provider value={{myvalue}} >
+//                 <College/>
+//        </myContext.Provider>
+    
+//     </>
+//   )
+// }
 // export default App;
+// export {myContext};
 
+// import { createContext } from "react";
+// import { useState } from "react";
+// import College from "./College";
 
-// src/App.js
-import React from 'react';
-import PieChartComponent from './components/Chart';
+// const myContext=createContext();
+// const App=()=>{
+//   const [myvalue,setMyvalue]=useState(" I am Developer ");
+  
+//   return(
+//     <>
+//        <myContext.Provider value={{myvalue}}>
+//                <College/>
+//        </myContext.Provider>
+//     </>
+//   )
+// }
+// export default App;
+// export {myContext}
 
-const App = () => (
-  <div>
-    <h1>Recharts Pie Chart Example</h1>
-    <PieChartComponent />
-  </div>
-);
+import { createContext } from "react";
+import { useState } from "react";
 
-export default App;
+const myContext=createContext();
+const App=({children})=>{
 
+  const [myVlaue,setMyvalue]=useState=("Rahul Lokhande");
+
+  return(
+    <>
+    <myContext.Provider value={{myVlaue,setMyvalue}}>
+      {children}
+    </myContext.Provider>
+    </>
+  )
+}
+export default App; 
+export {myContext};
