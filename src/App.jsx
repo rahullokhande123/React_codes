@@ -41,19 +41,15 @@
 // export default App;
 // export {myContext}
 
-import { useContext } from "react";
 import { myContext } from "./Context";
-
+import { useContext } from "react";
 const App=()=>{
-
-  const {myVlaue,setMyvalue}=useContext(myContext);
-  
+  const {course,setCourse}=useContext(myContext);
   return(
     <>
-    <h1>Wellcome {myVlaue}</h1>
-    <button onClick={()=>{setMyvalue("Python Devoloper")}}>Change</button>
+    <h1>Wellcome {course}</h1>
+    <button onClick={()=>{setCourse("Python")}}>Change</button>
     </>
   )
 }
-export default App; 
-export {myContext};
+export default App;

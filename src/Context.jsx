@@ -2,17 +2,16 @@ import { createContext } from "react";
 import { useState } from "react";
 
 const myContext=createContext();
-const Context=({children})=>{
+const CourseContext=({children})=>{
+    const [course,setCourse]=useState("PHP")
 
-  const [myVlaue,setMyvalue]=useState=("Rahul Lokhande");
-
-  return(
-    <>
-    <myContext.Provider value={{myVlaue,setMyvalue}}>
-      {children}
-    </myContext.Provider>
-    </>
-  )
+    return(
+        <>
+        <myContext.Provider value={{course,setCourse}}>
+              {children}
+        </myContext.Provider>
+        </>
+    )
 }
-export default Context; 
+export default CourseContext;
 export {myContext};
