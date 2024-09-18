@@ -5,6 +5,8 @@
 // import Cybrom from "./Cybrom";
 // import College from "./College";
 
+import { useState } from "react";
+
 // const myContext=createContext();
 
 // const App=()=>{
@@ -41,14 +43,26 @@
 // export default App;
 // export {myContext}
 
-import { myContext } from "./Context";
-import { useContext } from "react";
+// import { myContext } from "./Context";
+// import { useContext } from "react";
+// const App=()=>{
+//   const {course,setCourse}=useContext(myContext);
+//   return(
+//     <>
+//     <h1>Wellcome {course}</h1>
+//     <button onClick={()=>{setCourse("Python")}}>Change</button>
+//     </>
+//   )
+// }
+// export default App;
+
+
 const App=()=>{
-  const {course,setCourse}=useContext(myContext);
+  const [color,setColor]=useState(red);
+
   return(
     <>
-    <h1>Wellcome {course}</h1>
-    <button onClick={()=>{setCourse("Python")}}>Change</button>
+    <div style={{}}></div>
     </>
   )
 }
