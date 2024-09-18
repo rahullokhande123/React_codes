@@ -41,19 +41,17 @@
 // export default App;
 // export {myContext}
 
-import { createContext } from "react";
-import { useState } from "react";
+import { useContext } from "react";
+import { myContext } from "./Context";
 
-const myContext=createContext();
-const App=({children})=>{
+const App=()=>{
 
-  const [myVlaue,setMyvalue]=useState=("Rahul Lokhande");
-
+  const {myVlaue,setMyvalue}=useContext(myContext);
+  
   return(
     <>
-    <myContext.Provider value={{myVlaue,setMyvalue}}>
-      {children}
-    </myContext.Provider>
+    <h1>Wellcome {myVlaue}</h1>
+    <button onClick={()=>{setMyvalue("Python Devoloper")}}>Change</button>
     </>
   )
 }
