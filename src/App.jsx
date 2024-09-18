@@ -58,11 +58,12 @@ import { useState } from "react";
 
 
 const App=()=>{
-  const [color,setColor]=useState(red);
+  const [color,setColor]=useState("red");
 
   return(
     <>
-    <div style={{}}></div>
+    <div style={{width:"100px",height:"100px",border:"2px solid black",backgroundColor:color}}></div>
+    <button onClick={()=>{setColor("black")}}>Change</button>
     </>
   )
 }
