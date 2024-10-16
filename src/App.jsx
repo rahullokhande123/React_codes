@@ -6,7 +6,7 @@ import Page4 from "./components/Page4";
 
 import img1 from "./r1.jpg"
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const name="Rahul";
 const age=24;
@@ -68,6 +68,7 @@ const App=()=>{
   const [count,setCount]=useState(0)
   const [name,setName]=useState("")
   const [city,setCity]=useState("")
+  const [cnt,setCnt]=useState(0)
 
   const Inc=()=>{
     setCount(count+1)
@@ -85,6 +86,13 @@ const App=()=>{
     let InputeVAL={name:name, city:city}
     alert(InputeVAL.name+" "+InputeVAL.city)
   }
+  // ====================================
+  useEffect(()=>{
+    setTimeout(()=>{
+      setCnt(cnt+1)
+    },2000)
+  })
+
   
   return(
 
@@ -142,6 +150,9 @@ const App=()=>{
     <input type="text" value={name} onChange={(e)=>{setName(e.target.value)}} />
     <input type="text" value={city} onChange={(e)=>{setCity(e.target.value)}} />
     <button onClick={Submit}>Submit</button>
+    <h2>===================================</h2>
+
+    <h2>Counter = {cnt}</h2>
 
     </>
   )
