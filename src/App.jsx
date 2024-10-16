@@ -1,4 +1,5 @@
 
+import axios from "axios";
 import Page1 from "./components/Page1"
 import Page2 from "./components/Page2"
 import Page3 from "./components/Page3"
@@ -69,6 +70,8 @@ const App=()=>{
   const [name,setName]=useState("")
   const [city,setCity]=useState("")
   const [cnt,setCnt]=useState(0)
+  const [mycnt,setMyCnt]=useState(1)
+  const [mydata,setMydata]=useState([])
 
   const Inc=()=>{
     setCount(count+1)
@@ -90,10 +93,38 @@ const App=()=>{
   useEffect(()=>{
     setTimeout(()=>{
       setCnt(cnt+1)
-    },2000)
+    },1000)
   })
 
-  
+  useEffect(()=>{
+    setMyCnt(mycnt*2)
+  },[cnt])
+
+  // =====================================
+  const loadData=()=>{
+    let api="http://localhost:3000/Student";
+    axios.get(api).then((res)=>{
+      setMydata(res.data)
+      console.log(res.data)
+    })
+  }
+  useEffect(()=>{
+    loadData()
+  },[])
+
+  const ans=mydata.map((key)=>{
+    return(
+      <>
+      <tr>
+      <td>{key.name}</td>
+      <td>{key.userid}</td>
+      <td>{key.email}</td>
+      <td>{key.password}</td>
+      </tr>
+      </>
+    )
+  })
+
   return(
 
     <>
@@ -152,7 +183,23 @@ const App=()=>{
     <button onClick={Submit}>Submit</button>
     <h2>===================================</h2>
 
+    <h2>Counter Auto Increment By useEffect Hook</h2>
     <h2>Counter = {cnt}</h2>
+
+    <h2>{mycnt}</h2>
+
+    <h2>===================================</h2>
+
+    <h2>DATA Fetch From Rest API</h2>
+    <table border="2">
+      <tr>
+        <th>Name</th>
+        <th>User Id</th>
+        <th>Email</th>
+        <th>Password</th>
+      </tr>
+      {ans}
+    </table>
 
     </>
   )
