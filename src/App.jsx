@@ -57,14 +57,71 @@ import { useState } from "react";
 // export default App;
 
 
-const App=()=>{
-  const [color,setColor]=useState("red");
+import Cybrom from "./Cybrom";
+import Contect from "./College";
+import Address from "./Context";
 
-  return(
+const mydata=[
+  {
+    "key1":"Rahul Lokhande",
+    "key2":24,
+    "key3":"Bhopal"
+  }
+]
+const myhead={
+  color:"blue",
+  fontFamily:"verdana"
+}
+
+
+import { BrowserRouter,Routes,Route } from "react-router-dom";
+import Layout from "./Layout";
+const App=()=>{
+  // const ans=mydata.map((key)=>{
+  //   return(
+  //     <>
+  //     <table border={1}>
+  //       <tr>
+  //       <th>Name</th>
+  //       <th>Age</th>
+  //       <th>City</th>
+  //       </tr>
+  //       <tr>
+  //         <td>{key.key1}</td>
+  //       </tr>
+  //     </table>
+  //     </>
+  //   )
+  // })
+return(
     <>
-    <div style={{width:"100px",height:"100px",border:"2px solid black",backgroundColor:color}}></div>
-    <button onClick={()=>{setColor("black")}}>Change</button>
+    {/* <h1 id="rahul">Rahul</h1>
+    < Cybrom/>
+    <Address/>
+    {ans}
+
+    <label htmlFor="carstore">Select Car</label>
+    <select name="carstore" id="carstore">
+      <option value="select">Select</option>
+      <option value="Mercdis">Mersedis</option>
+      <option value="thar">Thar</option>
+      <option value="bulero">Bolero</option>
+    </select> */}
+
+  <BrowserRouter>
+  
+            <Routes>
+                  <Route path="/" element={<Layout/>}>
+                  {/* <Route index element={<Layout/>}></Route> */}
+                  <Route path="/context" element={<Address/>}></Route>
+                  <Route path="/cybrom" element={<Cybrom/>}></Route>
+                  <Route path="college" element={<Contect/>}></Route>
+                  </Route>
+            </Routes>
+
+  </BrowserRouter>
+
     </>
   )
 }
-export default App;
+export default App
