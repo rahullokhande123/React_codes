@@ -4,6 +4,10 @@ import Page2 from "./components/Page2"
 import Page3 from "./components/Page3"
 import Page4 from "./components/Page4";
 
+import img1 from "./r1.jpg"
+
+import { useState } from "react";
+
 const name="Rahul";
 const age=24;
 const DOB="07/08/2000";
@@ -52,8 +56,36 @@ const myhead1={
 
 // ============================================
 
+const myName=(nm)=>{
+  alert(" This is area of : " + nm + ","+" let's play ")
+}
+
 
 const App=()=>{
+
+  const [course,setCourse]=useState("Python")
+  const [color,setColor]=useState("Green")
+  const [count,setCount]=useState(0)
+  const [name,setName]=useState("")
+  const [city,setCity]=useState("")
+
+  const Inc=()=>{
+    setCount(count+1)
+  }
+  const Dec=()=>{
+    setCount(count-1)
+  }
+  const Res=()=>{
+    setCount(0)
+  }
+
+  // ====================================
+
+  const Submit=()=>{
+    let InputeVAL={name:name, city:city}
+    alert(InputeVAL.name+" "+InputeVAL.city)
+  }
+  
   return(
 
     <>
@@ -80,6 +112,36 @@ const App=()=>{
     <h2>===================================</h2>
 
     <h1 className="head1">Hello Devoloper's, Wellcom to cybrom Bhopal!!!!</h1>
+    <h2>===================================</h2>
+    <h2>2 Type geting Image by import(In src) and direct(public folder)</h2>
+
+    <img src={img1} alt="" width="250px" height="200px" />
+    <img src="public/c4.jpg" alt="" width="250px" height="200px" />
+
+    <h2>===================================</h2>
+
+    <>
+      <h1>Wellcome To Gaming World</h1>
+      <button onClick={()=>{myName("PUBG")}}>Click Here</button>
+    </>
+
+    <h2>===================================</h2>
+    <h2>Hooks :- </h2>
+    <h2 style={{color:color,fontSize:"40px"}}> Course : {course}</h2>  <br />
+    <button onClick={()=>{setCourse("Django")}}>Click For Change Course</button>
+    <button onClick={()=>{setColor("yellow")}}>Change Color</button>
+
+    <h2>Counter Program ======</h2>
+    <h1>Counter : {count}</h1>
+    <button onClick={Inc}>Increment</button>
+    <button onClick={Dec}>Decrement</button>
+    <button onClick={Res}>Clear</button> <br />
+
+    <h2>===================================</h2>
+    <h1> Application Form </h1>
+    <input type="text" value={name} onChange={(e)=>{setName(e.target.value)}} />
+    <input type="text" value={city} onChange={(e)=>{setCity(e.target.value)}} />
+    <button onClick={Submit}>Submit</button>
 
     </>
   )
