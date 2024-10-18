@@ -1,7 +1,7 @@
 // import { createContext } from "react";
 // import { useState } from "react";
 
-import { createContext, useState } from "react"
+//import { createContext, useState } from "react"
 
 // const myContext=createContext();
 // const CourseContext=({children})=>{
@@ -18,17 +18,17 @@ import { createContext, useState } from "react"
 // export default CourseContext;
 // export {myContext};
 
-const myContext=createContext()
-const myColorContext=({children})=>{
-    const [color,setColor]=useState("gray")
+// const myContext=createContext()
+// const mycolorContext=({children})=>{
+//     const [mycolor,setMycolor]=useState("gray")
 
-    return(
-        <>
-        <myContext.Provider value={{color,setColor}} >
-            {children}
-        </myContext.Provider>
-        </>
-    )
-}
-export default myColorContext;
-export {myContext}
+//     return(
+//         <>
+//         <myContext.Provider value={{mycolor,setMycolor}} >
+//             {children}
+//         </myContext.Provider>
+//         </>
+//     )
+// }
+// export default mycolorContext;
+// export {myContext}

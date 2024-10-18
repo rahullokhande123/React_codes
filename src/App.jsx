@@ -149,6 +149,8 @@ const App=()=>{
   setTimeout(()=>{
     setValue(true)
   },4000)
+
+  // =====================================================
   return(
 
     <>
@@ -234,12 +236,7 @@ const App=()=>{
     {myValue ? <Page1/>: <Page2/>}
 
     <h2>====================================</h2>
-    <h1>Theme Change Program By Context API</h1>
-     <div style={{marginLeft:"150px"}}>
-     <input type="text" placeholder="Enter Color"  />
-     <button >Change Color</button> <br /> <br />
-     <div style={{width:"300px",height:"300px",border:"2px solid black",backgroundColor:color}}></div>
-     </div>
+    
 
     
     
