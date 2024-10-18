@@ -4,6 +4,10 @@ import App from './App.jsx'
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import "./css/style.css";
 import "./css/style.css";
-ReactDOM.createRoot(document.getElementById('root')).render(<App />
-         
+import myColorContext from './Context.jsx';
+ReactDOM.createRoot(document.getElementById('root')).render(
+<myColorContext >
+    <App />
+</myColorContext>
+
 )
