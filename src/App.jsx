@@ -72,6 +72,7 @@ const App=()=>{
   const [cnt,setCnt]=useState(0)
   const [mycnt,setMyCnt]=useState(1)
   const [mydata,setMydata]=useState([])
+  const [input,setInput]=useState({})
 
   const Inc=()=>{
     setCount(count+1)
@@ -124,6 +125,23 @@ const App=()=>{
       </>
     )
   })
+
+  // ========================================
+
+  const handlSubmit=()=>{
+    let url="http://localhost:3000/Student";
+    axios.post(url,input).then((res)=>{
+      alert("DATA Posted")
+      
+    })
+  }
+
+  const handleInput=(e)=>{
+    let name=e.target.name
+    let value=e.target.value
+    setInput(values=>({...values,[name]:value}))
+    console.log(input)
+  }
 
   return(
 
@@ -202,7 +220,9 @@ const App=()=>{
     </table>
    <h2>=====================================</h2>
        
-       
+      <input type="text" name="name" value={input.name} onChange={handleInput} />
+      <input type="text" name="email" value={input.email} onChange={handleInput} />
+      <button onClick={handlSubmit}>Submit</button>
 
     </>
   )
