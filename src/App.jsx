@@ -129,8 +129,8 @@ const App=()=>{
 
     <>
     <h1>App Componente</h1>
-    <Page1/>
-    <Page2/>
+    <Page1 />
+    <Page2 myVal={true}/>
     <h2>===================================</h2>
     <b>This data Passed By Props In App To Page3</b>
     <Page3 name={name} age={age} DOB={DOB} city={city} />
@@ -200,7 +200,10 @@ const App=()=>{
       </tr>
       {ans}
     </table>
-  <h2>=====================================</h2>
+   <h2>=====================================</h2>
+       
+       
+
     </>
   )
 }
