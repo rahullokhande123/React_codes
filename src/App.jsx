@@ -73,6 +73,7 @@ const App=()=>{
   const [mycnt,setMyCnt]=useState(1)
   const [mydata,setMydata]=useState([])
   const [input,setInput]=useState({})
+  const [myValue,setValue]=useState(false)
 
   const Inc=()=>{
     setCount(count+1)
@@ -143,6 +144,11 @@ const App=()=>{
     console.log(input)
   }
 
+  // =====================================================
+
+  setTimeout(()=>{
+    setValue(true)
+  },4000)
   return(
 
     <>
@@ -219,11 +225,24 @@ const App=()=>{
       {ans}
     </table>
    <h2>=====================================</h2>
-       
+       <h2>Data Insert Method In Database</h2>
       <input type="text" name="name" value={input.name} onChange={handleInput} />
       <input type="text" name="email" value={input.email} onChange={handleInput} />
       <button onClick={handlSubmit}>Submit</button>
+    <h2>====================================</h2>
+    <h2>By Conditions :-</h2>
+    {myValue ? <Page1/>: <Page2/>}
 
+    <h2>====================================</h2>
+    <h1>Theme Change Program By Context API</h1>
+     <div style={{marginLeft:"150px"}}>
+     <input type="text" placeholder="Enter Color"  />
+     <button >Change Color</button> <br /> <br />
+     <div style={{width:"300px",height:"300px",border:"2px solid black",backgroundColor:color}}></div>
+     </div>
+
+    
+    
     </>
   )
 }
