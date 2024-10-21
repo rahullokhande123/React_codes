@@ -32,3 +32,24 @@
 // }
 // export default mycolorContext;
 // export {myContext}
+
+import { createContext } from "react"
+import { useState } from "react"
+
+const myContext=createContext();
+const ColorContext=({children})=>{
+
+    const [color,setColor]=useState("green")
+
+    return(
+        <>
+
+         <myContext.Provider value={{color,setColor}}>
+            {children}
+         </myContext.Provider>
+        
+        </>
+    )
+}
+export default ColorContext;
+export {myContext};
