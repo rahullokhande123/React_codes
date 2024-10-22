@@ -9,6 +9,9 @@ import img1 from "./r1.jpg"
 
 import { useEffect, useState } from "react";
 
+import { myContext } from "./Context";
+import { useContext } from "react";
+
 const name="Rahul";
 const age=24;
 const DOB="07/08/2000";
@@ -60,6 +63,9 @@ const myhead1={
 const myName=(nm)=>{
   alert(" This is area of : " + nm + ","+" let's play ")
 }
+
+// ============================================
+
 
 
 const App=()=>{
@@ -151,6 +157,10 @@ const App=()=>{
   },4000)
 
   // =====================================================
+
+  const {color2,setColor2}=useContext(myContext)
+  const [txt,setTex]=useState("")
+  
   return(
 
     <>
@@ -237,7 +247,13 @@ const App=()=>{
 
     <h2>====================================</h2>
     
-     
+     <input type="text" value={txt} onChange={(e)=>{setTex(e.target.value)}} />
+     <button onClick={()=>{setColor2(txt)}} >Change Color</button>
+     <div style={{width:"300px",height:"300px",border:"2px solid black",backgroundColor:color2}}>
+          <div style={{width:"150px",height:"150px",border:"2px solid black",backgroundColor:"black",margin:"auto",marginTop:"25%",borderRadius:"20px"}}>
+          <div align="center" style={{marginTop:"40%",color:"white",fontSize:"40px"}} >Rahul</div>
+          </div>
+     </div>
     
     
     </>

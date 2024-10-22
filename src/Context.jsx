@@ -39,12 +39,12 @@ import { useState } from "react"
 const myContext=createContext();
 const ColorContext=({children})=>{
 
-    const [color,setColor]=useState("green")
+    const [color2,setColor2]=useState("green")
 
     return(
         <>
 
-         <myContext.Provider value={{color,setColor}}>
+         <myContext.Provider value={{color2,setColor2}}>
             {children}
          </myContext.Provider>
         
