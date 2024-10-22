@@ -9,7 +9,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
    <ColorContext>
         <App />
    </ColorContext>
-    
-
 
 )
