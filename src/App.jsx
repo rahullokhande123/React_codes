@@ -7,7 +7,7 @@ import Page4 from "./components/Page4";
 
 import img1 from "./r1.jpg"
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { myContext } from "./Context";
 import { useContext } from "react";
@@ -160,7 +160,22 @@ const App=()=>{
 
   const {color2,setColor2}=useContext(myContext)
   const [txt,setTex]=useState("")
+
+  // =====================================================
+
+  const myRef=useRef();
+  const [refText,setReftext]=useState("Rahul")
+
+  const refSubmit=()=>{
+    setReftext("")
+    myRef.current.focus()
+    
+  }
   
+  const Change=()=>{
+    myRef.current.value=refText
+    myRef.current.style.color="yellow"
+  }
   return(
 
     <>
@@ -256,8 +271,11 @@ const App=()=>{
      </div>
 
     <h2>=====================================</h2>
-    <h2>LogIn / LogOut Program By Context API </h2>
-
+    <h2>useRef Hook </h2>
+     
+     <input ref={myRef} type="text" value={refText} onChange={(e)=>{setReftext(e.target.value)}} />
+     <button onClick={refSubmit} >Reset</button>
+     <button onClick={Change}>Changes</button>
     
     
     
