@@ -11,6 +11,7 @@ import { useEffect, useRef, useState } from "react";
 
 import { myContext } from "./Context";
 import { useContext } from "react";
+import useCounter from "./useCounter";
 
 const name="Rahul";
 const age=24;
@@ -176,6 +177,10 @@ const App=()=>{
     myRef.current.value=refText
     myRef.current.style.color="yellow"
   }
+
+  // =======================================================
+
+  const [count2,Increment,Decrement]=useCounter();
   return(
 
     <>
@@ -277,7 +282,9 @@ const App=()=>{
      <button onClick={refSubmit} >Reset</button>
      <button onClick={Change}>Changes</button>
     
-    
+    <h2>======================================</h2>
+    <h2>Counter By (Self) Custome Hook</h2>
+
     
     </>
   )
