@@ -285,7 +285,9 @@ const App=()=>{
     <h2>======================================</h2>
     <h2>Counter By (Self) Custome Hook</h2>
 
-    
+    <div>{count2}</div>
+    <button onClick={Increment}>Inc</button>
+    <button onClick={Decrement}>Dec</button>
     </>
   )
 }
