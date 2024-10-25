@@ -8,7 +8,9 @@ const useCounter=()=>{
         setCnt(count2 + 1)
     }
 
-    
+    const Decrement=()=>{
+        setCnt(count2 - 1)
+    }
 
     return [count2,Increment,Decrement]
 }
